@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppSpace.MainPage">
+
+    <Grid RowDefinitions="Auto,Auto,Auto" BackgroundColor="#0C0337">
+
+        <StackLayout Grid.Row="0" Margin="0,80,0,0"  Padding="30" HorizontalOptions="Center">
+            <Label Text="O lugar Ideal" TextColor="White" FontSize="32" LineHeight="30"/>
+            <Label Text="para explorar o espaço" TextColor="White" FontSize="28"/>
+            <Label Text="O espaço viaja com cada um etc etc" TextColor="White" FontSize="16"/>
+        </StackLayout>
+
+        <Image Source="Lua" Grid.Row="4" HorizontalOptions="Center" VerticalOptions="End" Margin="0,0,0,-200"  HeightRequest="700"/>
+
+
+        <Button Text=">" FontSize="32" BorderWidth="5" BorderColor="White"
+            Grid.Row="3" HorizontalOptions="Center" VerticalOptions="Center"
+            CornerRadius="80" HeightRequest="100" WidthRequest="100" BackgroundColor="LightGray"
+            Clicked="GoHome"/>
+
+
+
+
+
+    </Grid>
+
+
+
+</ContentPage>
