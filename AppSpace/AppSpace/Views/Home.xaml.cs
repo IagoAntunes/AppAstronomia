@@ -15,6 +15,7 @@ namespace AppSpace.Views
         public Home()
         {
             InitializeComponent();
+            BindingContext = new ViewModel.HomeViewModel();
         }
     }
 }

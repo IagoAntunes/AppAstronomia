@@ -17,7 +17,7 @@ namespace AppSpace
         private void GoHome(object sender, EventArgs args)
         {
 
-            App.Current.MainPage = new Views.Home1();
+            App.Current.MainPage = new Views.BarraNacegacao();
         }
     }
 }

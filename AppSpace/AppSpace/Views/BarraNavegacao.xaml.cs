@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace AppSpace.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Home1 : TabbedPage
+    public partial class BarraNacegacao : TabbedPage
     {
-        public Home1()
+        public BarraNacegacao()
         {
             InitializeComponent();
         }
