@@ -1,7 +1,9 @@
 ﻿using AppSpace.Models;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
+using Xamarin.Forms;
 
 namespace AppSpace.ViewModel
 {
@@ -19,6 +21,13 @@ namespace AppSpace.ViewModel
                new Objeto{Nome = "Satelites",Imagem = "Satelite",Cor = "#cdb28a"},
                new Objeto{Nome = "Foguetes",Imagem = "Foguete",Cor = "#cdb28a"},
            };
+
+
+            Servico.Conexoes.ReceberDados();
+
+
         }
+
+
     }
 }

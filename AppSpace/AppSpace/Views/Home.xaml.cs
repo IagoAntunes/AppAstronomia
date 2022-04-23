@@ -15,7 +15,12 @@ namespace AppSpace.Views
         public Home()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
             BindingContext = new ViewModel.HomeViewModel();
+        }
+        private async void GoListaObjetos(object sender, EventArgs args)
+        {
+            await Navigation.PushAsync(new PaginaListaObjeto());
         }
     }
 }

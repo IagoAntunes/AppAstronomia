@@ -13,11 +13,13 @@ namespace AppSpace
         public MainPage()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
+            Servico.Conexoes.ReceberDados();
         }
         private void GoHome(object sender, EventArgs args)
         {
 
-            App.Current.MainPage = new Views.BarraNacegacao();
+            App.Current.MainPage = new NavigationPage(new Views.Home());
         }
     }
 }
