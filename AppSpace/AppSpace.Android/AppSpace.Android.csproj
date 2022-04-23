@@ -100,7 +100,7 @@
     <AndroidResource Include="Resources\drawable\Astronauta.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Cometa.png" />
+    <AndroidResource Include="Resources\drawable\Asteroide.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\Jupter.png" />

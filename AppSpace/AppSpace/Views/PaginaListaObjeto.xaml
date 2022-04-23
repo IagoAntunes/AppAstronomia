@@ -4,7 +4,7 @@
              x:Class="AppSpace.Views.PaginaListaObjeto">
     <Grid RowDefinitions="*">
         <Grid RowDefinitions="Auto,Auto,Auto,Auto" ColumnDefinitions="*,Auto" Padding="10">
-            <Label Grid.Row="0" Text="Pokédex" FontSize="42" TextColor="Black" FontAttributes="Bold"  Margin="20,30,20,0"/>
+            <Label Grid.Row="0" Text="{Binding Name}" FontSize="42" TextColor="Black" FontAttributes="Bold"  Margin="20,30,20,0"/>
             <Label Grid.Row="1" Grid.Column="0" FontSize="16"
                    HorizontalTextAlignment="Start"  Margin="20,30,20,0">
                 <Label.FormattedText>
@@ -20,41 +20,20 @@
             </Frame>
 
             <!--Lista de Pokemons -->
-            <CollectionView Grid.Row="3" ItemsSource="{Binding listaItens}"  x:Name="Iteste" Margin="0,40,0,0">
-                <CollectionView.ItemTemplate>
+            <CollectionView Grid.Row="3" ItemsSource="{Binding ListaItens}"  x:Name="Iteste" Margin="0,40,0,0" >
+                <CollectionView.ItemTemplate >
                     <DataTemplate>
                         <StackLayout>
-                            <Frame CornerRadius="10" BorderColor="Transparent" Margin="0,0,0,15" BackgroundColor="{Binding corFundo}" HeightRequest="150" Padding="0">
+                            <Frame CornerRadius="20" BorderColor="Black" 
+                                   Margin="0,0,0,15" BackgroundColor="{Binding corFundo}" HeightRequest="100" Padding="0">
                                 <Frame.GestureRecognizers>
                                     <TapGestureRecognizer CommandParameter="{Binding .}"/>
                                 </Frame.GestureRecognizers>
-                                <Grid RowDefinitions="50,50,60" IsClippedToBounds="True" RowSpacing="0">
-                                    <Label Grid.Row="0" Text="{Binding id,StringFormat='#00{0}'}" TextColor="Black" FontSize="18" FontAttributes="Bold" Margin="15,20,0,0"/>
-                                    <Label Grid.Row="1"  Text="{Binding name}" FontAttributes="Bold" FontSize="36" TextColor="White" Margin="15,-10,0,0"/>
-                                    <Image Grid.Row="0" Grid.RowSpan="3" Source="PokeballFundo" 
-                                           HorizontalOptions="End" VerticalOptions="Center" 
-                                           HeightRequest="200" WidthRequest="150" Opacity="0.8"
-                                           Margin="0,-35,0,0"/>
-                                    <Image Source="pontosFundo" Opacity="1"/>
+                                <Grid RowDefinitions="Auto,Auto"  RowSpacing="0" Margin="10,0,0,0" Padding="5" >
+                                    <Label Grid.Row="0" Text="{Binding id}" TextColor="Black" FontSize="18" FontAttributes="Bold" />
+                                    <Label Grid.Row="1"  Text="{Binding name,StringFormat='{0} >'}" HorizontalOptions="Start" VerticalOptions="EndAndExpand"
+                                           FontAttributes="Bold" FontSize="36" TextColor="Black" />
                                     <!-- Tipos de cada pokemon -->
-                                    <StackLayout Grid.Row="2" Orientation="Horizontal" Grid.Column="0" IsClippedToBounds="True" Margin="15,-40,0,0">
-                                        <CollectionView ItemsSource="{Binding types}" x:Name="teste" ItemsLayout="HorizontalList">
-                                            <CollectionView.ItemTemplate>
-                                                <DataTemplate>
-                                                    <StackLayout>
-                                                        <Frame BackgroundColor="{Binding corTipos}" Margin="2,0,2,0" Padding="4" BorderColor="Transparent"
-                                                               HorizontalOptions="Start" VerticalOptions="CenterAndExpand" CornerRadius="5" >
-                                                            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-                                                                <Image Source="{Binding Imagem}"/>
-                                                                <Label Text="{Binding type.name}" FontSize="14" 
-                                                                       TextColor="White" HorizontalTextAlignment="Center" />
-                                                            </StackLayout>
-                                                        </Frame>
-                                                    </StackLayout>
-                                                </DataTemplate>
-                                            </CollectionView.ItemTemplate>
-                                        </CollectionView>
-                                    </StackLayout>
                                 </Grid>
                             </Frame>
                         </StackLayout>

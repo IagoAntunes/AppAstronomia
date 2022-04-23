@@ -12,9 +12,10 @@ namespace AppSpace.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PaginaListaObjeto : ContentPage
     {
-        public PaginaListaObjeto()
+        public PaginaListaObjeto(String nome)
         {
             InitializeComponent();
+            BindingContext = new ViewModel.PaginaListaObjetoViewModel(nome);
         }
     }
 }

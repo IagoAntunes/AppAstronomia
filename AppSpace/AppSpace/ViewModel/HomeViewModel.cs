@@ -10,24 +10,17 @@ namespace AppSpace.ViewModel
 
     public class HomeViewModel
     {
-        public List<Objeto> ListaDeObjetos { get; set; }
+        public List<Objeto> ListaObjCollection { get; set; }
 
         public HomeViewModel()
         {
-            ListaDeObjetos = new List<Objeto>
+            ListaObjCollection = new List<Objeto>
            {
                new Objeto{Nome = "Planetas",Imagem = "Jupter",Cor = "#cdb28a"},
                new Objeto{Nome = "Luas",Imagem = "Lua",Cor = "#acbccc"},
-               new Objeto{Nome = "Satelites",Imagem = "Satelite",Cor = "#cdb28a"},
+               new Objeto{Nome = "Asteroides",Imagem = "Asteroide",Cor = "#cdb28a"},
                new Objeto{Nome = "Foguetes",Imagem = "Foguete",Cor = "#cdb28a"},
            };
-
-
-            Servico.Conexoes.ReceberDados();
-
-
         }
-
-
     }
 }

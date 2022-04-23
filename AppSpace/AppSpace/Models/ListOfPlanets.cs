@@ -4,8 +4,8 @@ using System.Text;
 
 namespace AppSpace.Models
 {
-    public class ListaObjetos
+    public class ListOfPlanets
     {
-        public static List<Objeto> ListaDeObjetos { get; set; }
+        public Objeto[] bodies { get; set; }
     }
 }

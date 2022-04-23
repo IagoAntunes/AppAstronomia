@@ -14,7 +14,6 @@ namespace AppSpace
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
-            Servico.Conexoes.ReceberDados();
         }
         private void GoHome(object sender, EventArgs args)
         {

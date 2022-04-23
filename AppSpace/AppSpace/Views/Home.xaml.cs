@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppSpace.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,7 +21,11 @@ namespace AppSpace.Views
         }
         private async void GoListaObjetos(object sender, EventArgs args)
         {
-            await Navigation.PushAsync(new PaginaListaObjeto());
+            Frame frameDetalhe = (Frame)sender;
+            TapGestureRecognizer tapGest = (TapGestureRecognizer)frameDetalhe.GestureRecognizers[0];
+            Objeto objeto = tapGest.CommandParameter as Objeto;
+            var Nome = objeto.Nome;
+            await Navigation.PushAsync(new PaginaListaObjeto(Nome));
         }
     }
 }
